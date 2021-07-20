@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 import time
+import User
 
 # Variables
 AMS311 = "https://stonybrook.zoom.us/wc/join/95252181784?pwd=Zk9jMnpYTGhmK0lta0hvcVNiWDAvdz09"
@@ -26,8 +27,8 @@ elif course == "5":
 else:
     meetingURL = input("Enter the meeting URL: ").replace('/j/', '/wc/join/')
 
-user = "kymmin"
-pw = "I'm a bass-player"
+user = User.user
+pw = User.password
 participants_threshold = 10 # Exiting number of participants to quit
 
 # Color codes
